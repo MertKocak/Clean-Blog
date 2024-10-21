@@ -1,0 +1,59 @@
+<%- include("partials/_header") -%>
+
+<body>
+
+  <%- include("partials/_navigation") -%>
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('img/contact-bg.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="page-heading">
+            <h1>Edit the Post</h1>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <form method="post" action="/posts/<%= post._id %>?_method=PUT" novalidate>
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              
+              <input type="text" value="<%= post.title %>" name="title" class="form-control" placeholder="Post Title" id="title" required>
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              
+              <textarea rows="5" class="form-control" name="detail" placeholder="Post Detail" id="detail" required><%= post.detail %></textarea>
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <br>
+          <div id="success"></div>
+          <div style="display: flex; justify-content: start; offset: 2;">
+            <button type="submit" style="color: white ; font-size: 22px; margin-bottom: 16px ;padding-left: 12px; padding-right: 12px; text-decoration: none ;height: 50px; width: 150px; background-color: black; text-align: center; align-content: center;justify-content: center; border-radius: 8px;" >
+                Update Post
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <%- include("partials/_footer") -%>
+
+</body>
+
+</html>

@@ -33,6 +33,17 @@
   </article>
 
   <hr>
+    <div style="display: flex;flex-direction: row; justify-content: center;  ">
+      <a style="color: white ;margin-right: 8px; font-size: 22px ;padding-left: 12px; padding-right: 12px; text-decoration: none ;height: 50px; width: 150px; background-color: black; text-align: center; align-content: center;justify-content: center; border-radius: 8px;" 
+      href="/posts/edit/<%= post._id%>">
+          Update Post
+      </a>
+      <a onclick="return confirm('Are you sure?')" style="color: white; margin-left: 8px; font-size: 22px ;padding-left: 12px; padding-right: 12px; text-decoration: none ;height: 50px; width: 150px; background-color: red; text-align: center; align-content: center;justify-content: center; border-radius: 8px;" 
+      href="/posts/<%= post._id %>?_method=DELETE">
+          Delete Post
+      </a>
+    </div>
+  <hr>
 
   <%- include("partials/_footer") -%>
 
