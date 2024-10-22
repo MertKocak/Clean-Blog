@@ -9,8 +9,6 @@ const app = express();
 
 //connect db
 mongoose.connect("mongodb+srv://mertkocak2811:fdBnalkqFmDoIqIH@cluster-1.aguzn.mongodb.net/clean-blog?retryWrites=true&w=majority&appName=Cluster-1", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
 }).then(() => {
   console.log('MongoDB Atlas bağlantısı başarılı!');
 }).catch((err) => {
